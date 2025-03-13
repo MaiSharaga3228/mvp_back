@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+    'drf_yasg',
+
     'mainapp'
 ]
 
@@ -76,6 +79,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mvp_magaz.wsgi.application'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
 
 
 # Database
