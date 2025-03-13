@@ -37,4 +37,7 @@ class Product(models.Model):
 
 class Cart(models.Model):
     owner = models.ForeignKey(get_user_model(), on_delete=models.SET_NULL, related_name='carts', null=True)
-    products = models.ManyToManyField(Product)
+    products = models.ManyToManyField(Product, blank=True)
+
+    def __str__(self):
+        return f'Cart {self.id} ({self.owner})'
