@@ -35,6 +35,7 @@ services:
       POSTGRES_HOST: postgres
       POSTGRES_PORT: $POSTGRES_PORT
       SECRET_KEY: $SECRET_KEY
+      APP_HOST: $APP_HOST
     ports:
       - ${EXTERNAL_APP_PORT}:${APP_PORT}
 volumes:
